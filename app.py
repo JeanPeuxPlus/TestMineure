@@ -11,7 +11,9 @@ st.title('Bienvenidos !')
 df = pd.DataFrame(values, columns=feature_names)
 df
 plot = df["alcohol"]
-st.write("Voici uno graphiico")
-st.line_chart(plot)
 
 
+bot = st.checkbox("Afficher le graph")
+
+if bot:
+   st.line_chart(plot)
